@@ -1,0 +1,49 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h1>Web application for parsing and saving to database</h1>
+<div style="text-align:center">
+</div>
+<div class="example-container">
+  <mat-form-field>
+    <input matInput [(ngModel)]="text" name="text" placeholder="Enter word">
+  </mat-form-field>
+  <button mat-button type="submit" mat-raised-button [disabled]="text == '' || fileText == undefined" (click)="onSubmit()"
+    color="primary">Search and Send</button>
+
+  <input id="file-upload" type="file" accept=".txt" (change)="fileUpload($event)">
+
+  <table mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="word">
+      <th mat-header-cell *matHeaderCellDef> Words </th>
+      <td mat-cell *matCellDef="let row">
+        {{row.word}}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="sentence">
+      <th mat-header-cell *matHeaderCellDef> Sentences </th>
+      <td mat-cell *matCellDef="let row">
+        {{row.text}}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="quantity">
+        <th mat-header-cell *matHeaderCellDef> Quantity </th>
+        <td mat-cell *matCellDef="let row">
+          {{row.quantity}}
+        </td>
+      </ng-container>
+
+    <ng-container matColumnDef="dateOfAdded">
+        <th mat-header-cell *matHeaderCellDef> Date Of Added </th>
+        <td mat-cell *matCellDef="let row">
+          {{row.dateOfAdded | date:'dd.MM.y HH.mm'}}
+        </td>
+      </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-paginator [length]="amountOfSentences" [pageSize]="pagService.pageSize" showFirstLastButtons (page)="pageSwitch($event)"
+    [hidePageSize]="true">
+  </mat-paginator>
+</div>

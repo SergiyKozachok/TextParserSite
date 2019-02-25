@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextParserServer", "TextParserServer\TextParserServer.csproj", "{A2F4E295-1AB3-4C0F-9616-39AFE63D6D12}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2F4E295-1AB3-4C0F-9616-39AFE63D6D12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2F4E295-1AB3-4C0F-9616-39AFE63D6D12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2F4E295-1AB3-4C0F-9616-39AFE63D6D12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2F4E295-1AB3-4C0F-9616-39AFE63D6D12}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {81BD20E7-A430-4C48-A8D7-75936E40B91E}
+	EndGlobalSection
+EndGlobal
